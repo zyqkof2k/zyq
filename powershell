@@ -1,0 +1,7 @@
+$Starttime=(get-date).AddHours(-1)  #Last 1 hour
+$Endtime=get-date
+$body=Get-WinEvent -FilterHashtable @{logname='system';level=2;StartTime=$Starttime;EndTime=$Endtime}|Group-Object Id|ConvertTo-Json
+$url="https://foo.com/bar"
+Invoke-WebRequest -UseBasicParsing $url -ContentType "Content-Type: application/json" -Method Post -Body $body
+
+#Powershell 5.1
