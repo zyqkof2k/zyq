@@ -5,3 +5,11 @@ $url="https://foo.com/bar"
 Invoke-WebRequest -UseBasicParsing $url -ContentType "Content-Type:application/json" -Method Post -Body $body
 
 #Powershell 5.1
+
+
+#!/bin/bash
+log=$(syslog -k Time ge -1h|awk '{print ("\{\"date\":\""$1"  "$2" " $3"\",\"server\":\""$4"\",\"error\":\""$5$6$7$8$9"\"\}")}')
+echo "$log"
+curl -H "Content-Type:application/json" -X POST -d $log 'https://foo.com/bar'
+
+#MACOS 10.13
