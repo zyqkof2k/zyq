@@ -9,6 +9,21 @@ Invoke-WebRequest -UseBasicParsing $url -ContentType "Content-Type:application/j
 
 
 
+
+PS C:\Windows\system32> ConvertFrom-Json $body
+
+Values  Count Group                                                                                                                                                                                         
+------  ----- -----                                                                                                                                                                                         
+{36}        1 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=因为用户设置的限制，卷影副本存储无法增长，卷 C: 的卷影复制被终止。}}                                                                                     
+{6008}      6 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=上一次系统的 17:23:30 在 ‎2021/‎6/‎18 上的关闭是意外的。}, @{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=上一次系统的 17...
+{7031}     10 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=VMware Workstation Server 服务意外地终止，这种情况已经出现了 1 次。以下的修正操作将在 60000 毫秒内运行: 重新启动服务。}, @{value=System.Diagnostics.Eventing.Re...
+{7030}      1 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=Flash Helper Service 服务标记为交互服务。但是系统配置成不允许交互服务。这项服务可能无法正常操作。}}                                                             
+{7034}      2 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=服务 Steam Client Service 意外停止。这发生了 2 次。}, @{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=服务 Steam Cl...
+{10010}   200 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=服务器 {9BA05972-F6A8-11CF-A442-00A0C90A8F39} 没有在要求的超时时间内向 DCOM 注册。}, @{value=System.Diagnostics.Eventing.Reader.EventLogR...
+{7000}      3 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=由于下列错误，vwacgfwcte 服务启动失败: ...                                                                                             
+{7009}      1 {@{value=System.Diagnostics.Eventing.Reader.EventLogRecord; Message=等待 Steam Client Service 服务的连接超时(30000 毫秒)。}}              
+
+
 #MACOS 10.13
 
 #!/bin/bash
