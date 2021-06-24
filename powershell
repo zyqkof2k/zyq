@@ -1,4 +1,4 @@
-$Starttime=(get-date).AddHours(-1)  #Last 1 hour
+$Starttime=(get-date).AddDays(-1)  #Last 1 day
 $Endtime=get-date
 $body=Get-WinEvent -FilterHashtable @{logname='system';level=2;StartTime=$Starttime;EndTime=$Endtime}|Group-Object Id|ConvertTo-Json
 $url="https://foo.com/bar"
