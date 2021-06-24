@@ -9,7 +9,7 @@ Invoke-WebRequest -UseBasicParsing $url -ContentType "Content-Type:application/j
 
 
 
-
+#以下是日志汇总内容
 PS C:\Windows\system32> ConvertFrom-Json $body
 
 Values  Count Group                                                                                                                                                                                         
